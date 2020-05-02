@@ -13,10 +13,8 @@ public class ToolsTest {
 
     @Test
     public void stingToStringArray() throws Exception {
-        Assert.assertEquals(tools.stingToStringArray("1公里,等待0分钟\\n" +
-                "3公里,等待0分钟\\n" +
-                "10公里,等待0分钟\\n" +
-                "2公里,等待3分钟"),
+        Assert.assertEquals(tools.stingToStringArray(
+                "1公里,等待0分钟\n3公里,等待0分钟\n10公里,等待0分钟\n2公里,等待3分钟"),
                 new String[]{"1公里,等待0分钟","3公里,等待0分钟","10公里,等待0分钟","2公里,等待3分钟"});
     }
 }

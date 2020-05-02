@@ -17,6 +17,6 @@ public class Tools {
     }
 
     public String[] stingToStringArray(String str) {
-        return str.replace("\\", "").split("n");
+        return str.split("\n");
     }
 }
