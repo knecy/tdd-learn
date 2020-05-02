@@ -14,7 +14,7 @@ public class TaxiValuationController {
         for (int i = 0; i < strArray.length; i++) {
             stringBuilder.append("收费").append(calculateFee(strArray[i])).append("元\n");
         }
-        return stringBuilder.toString().substring(0, stringBuilder.toString().length() - 2);
+        return stringBuilder.toString().substring(0, stringBuilder.toString().length() - 1);
     }
 
     public String calculateFee(String str) {
