@@ -12,9 +12,9 @@ public class TaxiValuationController {
         String[] strArray = tools.stingToStringArray(text);
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < strArray.length; i++) {
-            stringBuilder.append("收费").append(calculateFee(strArray[i])).append("元\\n");
+            stringBuilder.append("收费").append(calculateFee(strArray[i])).append("元\n");
         }
-        return stringBuilder.toString();
+        return stringBuilder.toString().substring(0, stringBuilder.toString().length() - 2);
     }
 
     public String calculateFee(String str) {
@@ -22,7 +22,7 @@ public class TaxiValuationController {
         String mf = mileageFee(feeType[0].replace("公里", ""));
         String wf = waitingFee(feeType[1].replace("等待", "").replace("分钟", ""));
         BigDecimal db = new BigDecimal(String.valueOf(Double.valueOf(mf) + Double.valueOf(wf)));
-        return String.valueOf(db.setScale(0,BigDecimal.ROUND_HALF_UP));
+        return String.valueOf(db.setScale(0, BigDecimal.ROUND_HALF_UP));
     }
 
     public String mileageFee(String mileage) {
