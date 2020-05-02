@@ -10,7 +10,7 @@ public class AppRunner {
     public static void main(String[] args) {
         TaxiValuationController taxiValuationController = new TaxiValuationController();
         try {
-            String testDataFile = tools.fileReader("src/main/resources/testData.txt");
+            String testDataFile = tools.fileReader("src/main/resources/" + args[0]);
             String receipt = taxiValuationController.taxiValuation(testDataFile);
             System.out.println(receipt);
         } catch (Exception e) {
