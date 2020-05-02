@@ -10,7 +10,7 @@ public class Tools {
         String tempString;
         StringBuilder stringBuilder = new StringBuilder();
         while ((tempString = reader.readLine()) != null) {
-            stringBuilder.append(tempString).append("\\n");
+            stringBuilder.append(tempString).append("\n");
         }
         reader.close();
         return stringBuilder.toString();

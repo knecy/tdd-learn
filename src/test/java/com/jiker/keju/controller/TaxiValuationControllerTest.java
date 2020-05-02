@@ -9,8 +9,8 @@ public class TaxiValuationControllerTest {
     @Test
     public void taxiValuation() {
         Assert.assertEquals(taxiValuationController.taxiValuation(
-                "1公里,等待0分钟\n3公里,等待0分钟\n10公里,等待0分钟\n2公里,等待3分钟"),
-                "收费6元\n收费7元\n收费13元\n收费7元");
+                "1公里,等待0分钟\n4公里,等待0分钟\n10公里,等待0分钟\n2公里,等待3分钟"),
+                "收费6元\n收费8元\n收费13元\n收费7元");
     }
 
     @Test
