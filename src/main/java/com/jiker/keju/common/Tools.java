@@ -6,8 +6,7 @@ import java.io.FileReader;
 
 public class Tools {
     public String fileReader(String fileName) throws Exception {
-        File file = new File(fileName);
-        BufferedReader reader = new BufferedReader(new FileReader(file));
+        BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
         String tempString;
         StringBuilder stringBuilder = new StringBuilder();
         while ((tempString = reader.readLine()) != null) {
@@ -17,7 +16,7 @@ public class Tools {
         return stringBuilder.toString();
     }
 
-    public String[] stingToStringArray(String str){
-        return str.replace("\\","").split("n");
+    public String[] stingToStringArray(String str) {
+        return str.replace("\\", "").split("n");
     }
 }
